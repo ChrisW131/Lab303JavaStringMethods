@@ -1,0 +1,188 @@
+Notes:
+
+- Autoboxing - Automatically converting primitive values to their matching wrapper class objects.
+
+- Unboxing - Converting an object of a wrapper type to its corresponding primitive value.
+
+- 'new' - keyword used to create instances of integer and double.
+
+- .valueOf() - way to create instances of wrapper classes.
+
+- Character - the character class object can hold a single character value jus like a primitive char.
+
+- Two ways to create a Character object in java:
+Character literal:
+	Character letter = 'g';
+	Character num = '7';
+	
+Character .valueOf():
+	Character letter =  Character.valueOf('g');
+	Character num = Character.valueOf('7');
+	
+Methods of Character:
+
+- isDigit(ch)
+Returns True if the specified character is a digit.
+
+- isLetter(ch) 
+Returns True if the specified character is a letter.
+
+- isLetterOrDigit(ch) 
+Returns True if the specified character is a letter or a digit.
+
+- isLowerCase(ch) 
+Returns True if the specified character is a lowercase letter.
+ 
+- isUpperCase(ch) 
+Returns True if the specified character is an uppercase letter.
+ 
+- toLowerCase(ch) 
+Returns the lowercase of the specified character.
+ 
+- toUpperCase(ch)
+Returns the uppercase of the specified character.
+ 
+- valueOf()
+valueOf(String s),
+valueOf(String s, int radix)
+
+he valueOf method returns the relevant Number Object holding the value of the argument passed. The argument can be a primitive data type, string, etc.
+
+Escape Sequence - is a two-character sequence that represents a single special character.
+- is a character preceded by a backslash(/), which gives a different meaning to the compiler.
+
+~ /t - inserts a tab in the text at this point
+~ /b - inserts a backspace in the text at this point
+~ /n - inserts a new line in  the text at this point
+~ /r - inserts a carrier return in the text at this point
+~ /f - inserts a form feed in the text at this point
+~ /' - inserts a single quote character in the text at this point
+~ /" - inserts a double quote character in the text at this point
+~ // - inserts a backslash in the text at this point
+
+String -  is a sequence of character. for example "Hello" is a string of five characters.
+
+Two ways to create strings in java:
+
+String Literal: 
+string s1 = "welcome"
+
+New operator:
+string s = new string("welcome");// creates two objects and one references variable. 
+
+replaceAll() - replaces each substring that matches the regex of the string with specified text.
+
+Syntax - string.replaceAll(string regex, String replacement)
+
+Regex - (can be typical string) that is replaced.
+
+
+
+toString() - is an in-built method in Java that returns the value given to it in a string format. Hence, any object that this method is applied to will be returned as a string object. Has two methods of implementations.
+
+The First Implementation - is when it is called a method of an object instance.
+
+Ex:
+public static void main( String args[] ) {
+        //Creating an integer of value 10
+        Integer number=10;
+ // Calling the toString() method as a function of the Integer variable
+        System.out.println( number.toString() );
+    }
+
+    
+The Second Implementation -  is when you call the member method of the relevant class by passing the value as an argument.
+
+Ex: 
+public static void main( String args[] ) {
+        // The method is called on datatype Double
+        // It is passed the double value as an argument
+        System.out.println(Double.toString(11.0));
+        // Implementing this on other datatypes
+        //Integer
+        System.out.println(Integer.toString(12));
+        // Long
+        System.out.println(Long.toString(123213123));
+        // Booleam
+        System.out.println(Boolean.toString(false));
+    }
+
+StringBuffer - is a peer class of string that provides much of the functionality of strings.
+- Creates objects that hold a mutable sequence of characters.
+- extends (or inherits from) object class.
+- string is fixed length, immutable character sequence while stingbuffer represents growable and writable character sequence.
+
+
+new StringBuffer() → Creates an empty String buffer with the initial capacity of 16.
+
+new StringBuffer​(int capacity) → Creates an empty String buffer with the specified capacity as length.
+StringBuffer​(100) → Room for 100 characters.
+
+new StringBuffer​(String str) → Creates a String buffer with the specified string.
+New StringBuffer(“Per Scholas”) → Room for given string and 16 additional characters.
+
+StringJoiner - is used to construct a sequence of character separated by a delimiter.
+
+
+
+Multiple ways to format output in java: 
+- System.out.format().
+- System.out.printf().
+- String.format().
+
+You can use format() or printf() anywhere in your code that previously used print or println.
+Both methods are identical and behave similarly.
+
+DecimalFormat() - designed to format any number in java, to be an integer,float,double.
+
+
+- print() -  prints string inside the quotes
+
+- println() - prints string inside the quotes similar to the print() method. Then the cursor moves to the beginning of the next line.
+
+- printf() - provides string formatting(similar to printf in c/c++ programming)
+
+
+
+Math Class: 
+
+max(a,b) and min(a,b)
+- returns the maximum or minimum of two parameters.
+
+abs(a)
+-returns the absolute value of the parameter
+
+exp(double a)
+- returns the base of natural log (e) to the power of argument
+
+log(double a)
+-return the natural logarithm of a
+
+log10(double a)
+- Return the 10-based logarithm of a.
+
+pow(double a, double b).
+- Return a raised to the power of b.
+
+sqrt(double a).
+- Return the square root of a.
+
+
+double ceil(double x).
+- x rounded up to its nearest integer. This integer is returned as a double value.
+
+double floor(double x).
+- x is rounded down to its nearest integer. This integer is returned as a double value.
+
+double rint(double x).
+- x is rounded to its nearest integer. If x is equally close to two integers, the even one is returned as a double.
+
+int round(float x).
+- Return (int)Math.floor(x+0.5).
+
+long round(double x).
+- Return (long)Math.floor(x+0.5).
+
+Math.random() - generates a random number in the range.
+
+
